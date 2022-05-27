@@ -1,2 +1,2 @@
-# myarch-pkgbuild
+# myArch-pkgbuild
 myArch pkgbuild collection.
