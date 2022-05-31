@@ -1,0 +1,21 @@
+pkgname=myarch-calamares-config
+_destname="/etc"
+pkgver=22.05
+pkgrel=1
+pkgdesc="calamares for myArch"
+arch=('any')
+url="https://github.com/wheeljack73/${pkgname}"
+license=('GPL3')
+makedepends=('git')
+depends=()
+conflicts=()
+provides=("${pkgname}")
+options=(!strip !emptydirs)
+source=(${pkgname}::"git+${url}.git")
+sha256sums=('SKIP')
+package() {
+	install -dm755 ${pkgdir}${_destname}
+	cp -r ${srcdir}/${pkgname}${_destname}/* ${pkgdir}${_destname}
+#	mkdir -p "${pkgdir}${_destname}"
+#	cp -r "${srcdir}/${pkgname}/etc/calamares/"* "${pkgdir}${_destname}"
+}

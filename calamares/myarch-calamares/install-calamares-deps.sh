@@ -19,5 +19,5 @@ sudo pacman -S --needed --noconfirm qt5-tools
 sudo pacman -S --needed --noconfirm qt5-translations
 sudo pacman -S --needed --noconfirm git
 sudo pacman -S --needed --noconfirm boost
-yay -S mkinitcpio-openswap --noconfirm
-yay -S ckbcomp --noconfirm
+yay -S mkinitcpio-openswap --needed --noconfirm
+yay -S ckbcomp --needed --noconfirm
