@@ -16,6 +16,4 @@ sha256sums=('SKIP')
 package() {
 	install -dm755 ${pkgdir}${_destname}
 	cp -r ${srcdir}/${pkgname}${_destname}/* ${pkgdir}${_destname}
-#	mkdir -p "${pkgdir}${_destname}"
-#	cp -r "${srcdir}/${pkgname}/etc/calamares/"* "${pkgdir}${_destname}"
 }
