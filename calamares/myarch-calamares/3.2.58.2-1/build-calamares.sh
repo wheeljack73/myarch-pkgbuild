@@ -15,7 +15,7 @@ tput sgr0
 
 updpkgsums
 
-makepkg
+makepkg --sign
 
 echo "Moving created files to " $destiny
 echo "#############################################################################################"
