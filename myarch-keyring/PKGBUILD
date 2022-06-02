@@ -1,0 +1,23 @@
+pkgname=myarch-keyring
+pkgver=20220602
+pkgrel=1
+pkgdesc='myArch keyring'
+arch=('any')
+url='https://endeavouros.com/'
+license=('GPL')
+install="${pkgname}.install"
+source=('Makefile'
+        'myarch.gpg'
+        'myarch-revoked'
+        'myarch-trusted')
+validpgpkeys=('8F43FC374CD4CEEA19CEE323E3D8752ACDF595A1') # j pedder
+
+sha512sums=('5faecba24d23f3133ca67b2ebb3fad1d573de80103f12bb3839cba056c10dba7c9254af7aa6f00e41f14f3260ff6ce09bf1e79d49beb2298580b3f6a07631429'
+            '130b4f2e365ae9ae754bedea1e01e2687c3cff8180d5a63a0a9485c9278557a7d9535d48c3bb1ee2eae490ada7dd4345e2d84b9e6268cfb1d261029a433bbe00'
+            'cf83e1357eefb8bdf1542850d66d8007d620e4050b5715dc83f4a921d36ce9ce47d0d13c5d85f2b0ff8318d2877eec2f63b931bd47417a81a538327af927da3e'
+            'a0f8e51516209e4fd2160b2ddf0730946ee5c4375aa16f65cdf6d641a17b4f23899fda3f37a2d0701f222f66087153a0353418e3476a77a6c9fd5ab601cc7f32')
+
+package() {
+	cd "${srcdir}"
+	make PREFIX=/usr DESTDIR=${pkgdir} install
+}
