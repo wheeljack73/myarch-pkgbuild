@@ -1,7 +1,7 @@
 pkgname=myarch-calamares-config
 _destname="/etc"
 pkgver=22.05
-pkgrel=7
+pkgrel=8
 pkgdesc="calamares for myArch"
 arch=('any')
 url="https://github.com/wheeljack73/${pkgname}"
