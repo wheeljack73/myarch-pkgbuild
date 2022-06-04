@@ -3,7 +3,7 @@
 pkgname=myarch-calamares
 _pkgname=calamares
 pkgver=3.2.59
-pkgrel=2
+pkgrel=3
 pkgdesc='Distribution-independent installer framework'
 arch=('i686' 'x86_64')
 license=(GPL)
@@ -25,7 +25,7 @@ source=("$_pkgname-$pkgver::$url/download/v$pkgver/$_pkgname-$pkgver.tar.gz"
 	"49-nopasswd-calamares.rules")
 
 sha256sums=('55adef250613e80a868f2aa3d1e57bdae5b769387d91decf0fe2b64e3605574f'
-            'd6a5ce002c99586dfa0cb8621cad631f148dfd0d6d234c31643a63c585c546ee'
+            '497d6bf2c08a3fe15bda1b51df6898cc00abd47bc7d7afa788c772464a694724'
             'c176b28007bd1c1f23d8dbb2c936fa54d0c01bacfb67290ddad597606c129df3'
             '56d85ff6bf860b9559b8c9f997ad9b1002f3fccc782073760eca505e3bddd176')
 
