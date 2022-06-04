@@ -6,7 +6,7 @@ pkgdesc="A Nerd Font patched version of Hack"
 arch=('any')
 url="https://github.com/ryanoasis/nerd-fonts"
 license=('MIT')
-depends=('fontconfig' 'xorg-font-utils')
+depends=('fontconfig')
 provides=('nerd-fonts-hack')
 makedepends=('fontconfig' 'xorg-mkfontscale' 'xorg-mkfontdir')
 conflicts=('nerd-fonts-git' 'nerd-fonts' 'nerd-fonts-complete')
@@ -17,7 +17,7 @@ sha256sums=('70852e59fcffbe31d401f615625bcb9ebb6af72732c2f1fe9b9d5370c2565514'
             'd2a29823384e9194a87936ccad495c764c2ef733b29bfa6f72a1d65803ce02e5')
 
 package() {
-#	install -d "$pkgdir/usr/share/fonts/TTF"
+	install -d {"$pkgdir/usr/share/fonts/OTF","$pkgdir/usr/share/fonts/TTF"}
 	find . -iname "*.otf" -not -iname "*Windows Compatible.otf" \
 		-execdir install -m644 {} "$pkgdir/usr/share/fonts/OTF/{}" \;
 
